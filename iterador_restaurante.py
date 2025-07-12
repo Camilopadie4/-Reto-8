@@ -1,4 +1,4 @@
-class Menu:
+class Menu:  # Clase padre. Sus hijos(Bebida, aperitivo, plato_principal...) tienen atributos adicionales como tamaño o cantidad
     def __init__(self, nombre: str, precio: float):
         self.nombre= nombre
         self.precio= precio 
@@ -27,7 +27,7 @@ class Plato_principal(Menu):
     def __str__(self):
         return f"{self.nombre} Porc:{self.cantidad} = ${self.precio}"
 
-class Orden:
+class Orden:   # Guarda los elementos(productos) que el usuario ha pedido y hace otras operaciones 
     def __init__(self):
         self.elementos= []
         
@@ -67,7 +67,7 @@ class iteracion:    # Nueva clase
             self.indicador += 1
             return elemento 
          else:
-             return StopIteration  # Se dtiene la iteracion en caso de no haber otro elemento 
+             return StopIteration # Cuando la iteracion termina, es decir, cuando ya no hay mas elementos  para recorrer 
 
 
 
